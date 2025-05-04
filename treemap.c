@@ -170,9 +170,25 @@ Pair *firstTreeMap(TreeMap * tree) {
 }
 
 Pair *nextTreeMap(TreeMap * tree) {
-    if (tree -> current -> right == NULL)
+    if (tree -> current == NULL)
         return NULL;
-    TreeNode *aux = minimum(tree -> current -> right);
-    tree -> current = aux;
-    return aux -> pair;
+
+    //Si tiene hijo derecho
+    if (tree -> current -> right != NULL) {
+        TreeNode *aux = minimum(tree -> current -> right);
+        tree -> current = aux;
+        return aux -> pair;
+    }
+
+    //Si no tiene hijo derecho (Intenta encontrar el parent de este subarbol izquierdo)
+    TreeNode *current = tree -> current;
+    TreeNode *padre = tree -> current -> parent;
+    while (current != NULL && current == padre -> right) {
+        current = padre;
+        padre = padre -> parent;
+    }
+    tree -> current = padre;
+    if (padre != NULL)
+        return padre -> pair;
+    return NULL;
 }
