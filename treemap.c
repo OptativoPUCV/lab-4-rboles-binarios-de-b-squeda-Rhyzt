@@ -183,7 +183,7 @@ Pair *nextTreeMap(TreeMap * tree) {
     //Si no tiene hijo derecho (Intenta encontrar el parent de este subarbol izquierdo)
     TreeNode *current = tree -> current;
     TreeNode *padre = tree -> current -> parent;
-    while (current != NULL && current == padre -> right) {
+    while (padre != NULL && current == padre -> right) {
         current = padre;
         padre = padre -> parent;
     }
