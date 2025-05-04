@@ -169,3 +169,20 @@ Sun, May  4, 2025  5:14:14 PM:
  tests:  26|1
 total_score: 60/70
 a2cef36
+Sun, May  4, 2025  5:25:01 PM: 
+ treemap.c | 14 +++++++-------
+ 1 file changed, 7 insertions(+), 7 deletions(-)
+Compilation failed
+In file included from test.c:4:0:
+treemap.c: In function 'upperBound':
+treemap.c:170:21: error: assignment from incompatible pointer type [-Werror=incompatible-pointer-types]
+             ub_node = aux;
+                     ^
+treemap.c:163:11: error: variable 'ub_node' set but not used [-Werror=unused-but-set-variable]
+     Pair *ub_node = tree -> root -> pair;
+           ^~~~~~~
+treemap.c:177:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1.exe: all warnings being treated as errors
+9f34ae7
