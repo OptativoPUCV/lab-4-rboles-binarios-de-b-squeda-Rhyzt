@@ -163,7 +163,9 @@ Pair *upperBound(TreeMap * tree, void* key) {
 }
 
 Pair *firstTreeMap(TreeMap * tree) {
-    return NULL;
+    if (tree -> root == NULL) return NULL;
+    TreeNode *first = minimum(tree -> root);
+    return first;
 }
 
 Pair *nextTreeMap(TreeMap * tree) {
