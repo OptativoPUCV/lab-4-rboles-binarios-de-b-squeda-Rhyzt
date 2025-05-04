@@ -172,7 +172,7 @@ Pair *firstTreeMap(TreeMap * tree) {
 Pair *nextTreeMap(TreeMap * tree) {
     if (tree -> current -> right == NULL)
         return NULL;
-    TreeNode *aux = minimum(tree -> current -> right) -> pair;
+    TreeNode *aux = minimum(tree -> current -> right);
     tree -> current = aux;
     return aux -> pair;
 }
