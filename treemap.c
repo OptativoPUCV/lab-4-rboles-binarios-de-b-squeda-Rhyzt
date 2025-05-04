@@ -160,7 +160,7 @@ Pair *searchTreeMap(TreeMap * tree, void* key) {
 
 Pair *upperBound(TreeMap * tree, void* key) {
     TreeNode *aux = tree -> root;
-    Pair *ub_node = tree -> root -> pair;
+    Pair *ub_node = NULL;
     while(aux != NULL) {
         if (is_equal(tree, key, aux->pair->key)) {
             tree -> current = aux;
