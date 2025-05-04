@@ -186,3 +186,17 @@ treemap.c:177:1: error: control reaches end of non-void function [-Werror=return
  ^
 cc1.exe: all warnings being treated as errors
 9f34ae7
+Sun, May  4, 2025  5:25:15 PM: 
+ treemap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:4:0:
+treemap.c: In function 'upperBound':
+treemap.c:163:11: error: variable 'ub_node' set but not used [-Werror=unused-but-set-variable]
+     Pair *ub_node = tree -> root -> pair;
+           ^~~~~~~
+treemap.c:177:1: error: control reaches end of non-void function [-Werror=return-type]
+ }
+ ^
+cc1.exe: all warnings being treated as errors
+01ec1da
