@@ -123,7 +123,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
         }
         //Caso 3, 2 hijos
         else {
-            TreeNode *min = minimum(aux);
+            TreeNode *min = minimum(aux -> right);
             aux -> pair = min -> pair;
             removeNode(tree, min);
         }
