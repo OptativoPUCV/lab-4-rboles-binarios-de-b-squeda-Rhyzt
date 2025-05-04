@@ -100,3 +100,9 @@ treemap.c:112:24: error: suggest parentheses around comparison in operand of '^'
                         ^
 cc1.exe: all warnings being treated as errors
 acf3205
+Sun, May  4, 2025  3:45:29 PM: 
+ treemap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  17|4
+total_score: 35/70
+8b4ea6d

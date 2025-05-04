@@ -94,8 +94,8 @@ void removeNode(TreeMap * tree, TreeNode* node) {
 
     if (tree -> root == NULL)
         return;
-        TreeNode *aux = searchTreeMap(tree, node -> pair -> key);
-
+    TreeNode *aux = node;
+    
     //Caso 1, sin hijos
     if (aux -> left == NULL && aux -> right == NULL) {
         if (aux -> parent == NULL)
@@ -109,7 +109,7 @@ void removeNode(TreeMap * tree, TreeNode* node) {
     }
     else {
         //Caso 2, 1 hijo
-        if(aux -> left == NULL ^ aux -> right == NULL) {
+        if((aux -> left == NULL) ^ (aux -> right == NULL)) {
             TreeNode *child = (aux -> left != NULL) ? aux -> left : aux -> right;
             if (aux -> parent == NULL)
                 tree -> root = child;
